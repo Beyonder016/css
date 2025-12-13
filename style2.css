@@ -1,0 +1,118 @@
+/* ===== PAGE LAYOUT ===== */
+body {
+  margin: 0;
+  height: 100vh;
+  background: #f7f6df;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+/* ===== COMMON ===== */
+.shape {
+  width: 140px;
+  background: #ffd800;
+}
+
+/* ⭐ STAR */
+.one {
+  aspect-ratio: 1;
+  clip-path: polygon(
+    50% 0,
+    calc(50% * (1 + sin(0.4turn))) calc(50% * (1 - cos(0.4turn))),
+    calc(50% * (1 - sin(0.2turn))) calc(50% * (1 - cos(0.2turn))),
+    calc(50% * (1 + sin(0.2turn))) calc(50% * (1 - cos(0.2turn))),
+    calc(50% * (1 - sin(0.4turn))) calc(50% * (1 - cos(0.4turn)))
+  );
+}
+
+/* 🌸 FLOWER */
+.flower {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.petal {
+  position: absolute;
+  width: 60px;
+  height: 100px;
+  background: pink;
+  border-radius: 50%;
+  top: 10px;
+  left: 30px;
+  transform-origin: bottom center;
+}
+
+.p1 {
+  transform: rotate(0deg);
+}
+.p2 {
+  transform: rotate(72deg);
+}
+.p3 {
+  transform: rotate(144deg);
+}
+.p4 {
+  transform: rotate(216deg);
+}
+.p5 {
+  transform: rotate(288deg);
+}
+
+/* ❤️ HEART */
+.heart {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background: red;
+  transform: rotate(-45deg);
+  box-shadow: 0 0 40px red;
+}
+
+.left,
+.right {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: red;
+  border-radius: 50%;
+}
+
+.left {
+  top: -60px;
+  left: 0;
+}
+
+.right {
+  top: 0;
+  left: 60px;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: rotate(45deg) translate(-50%, -50%);
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  text-shadow: 0 0 15px white;
+}
+
+/* 🟡 PACMAN */
+.pacman {
+  width: 0;
+  height: 0;
+  border-top: 50px solid yellow;
+  border-right: 50px solid transparent;
+  border-bottom: 50px solid yellow;
+  border-left: 50px solid yellow;
+  border-radius: 50%;
+}
